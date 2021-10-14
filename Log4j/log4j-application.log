@@ -1,0 +1,17 @@
+2021-10-15 01:24:00 INFO  Log4j:10 - Test is Starting...
+2021-10-15 01:24:08 INFO  Log4j:20 - Opening Page : https://www.Hepsiburada.com/
+2021-10-15 01:24:11 INFO  Log4j:20 - Go to login page
+2021-10-15 01:24:17 INFO  Log4j:20 - Send valid email and password
+2021-10-15 01:24:19 INFO  Log4j:20 - Verify that user can login
+2021-10-15 01:24:20 INFO  Log4j:20 - Search to buy a tablet
+2021-10-15 01:24:27 INFO  Log4j:20 - Choose one product on search page
+2021-10-15 01:24:36 INFO  Log4j:20 - Add the product to basket from 2 vendor
+2021-10-15 01:24:41 INFO  Log4j:20 - Verify that 2 product in basket
+2021-10-15 01:24:45 INFO  Log4j:15 - Test is Ending...
+2021-10-15 01:24:45 INFO  Log4j:10 - Test is Starting...
+2021-10-15 01:24:51 INFO  Log4j:20 - Opening Page : https://www.Hepsiburada.com/
+2021-10-15 01:24:56 INFO  Log4j:20 - The user goes to Kitap, Müzik, Film, Hobi,Uzaktan Kumandalı Araçlar product in basket
+2021-10-15 01:24:58 INFO  Log4j:20 - Click on Drone Yedek Parçaları
+2021-10-15 01:25:02 INFO  Log4j:20 - Choose one drone product on search page
+2021-10-15 01:25:08 INFO  Log4j:20 - Verify that 1 product in basket
+2021-10-15 01:25:12 INFO  Log4j:15 - Test is Ending...
