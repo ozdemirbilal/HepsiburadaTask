@@ -43,7 +43,7 @@ public class WithoutLoginStepDefs {
         BrowserUtils.waitForClickability(productPage.addToCart,10);
         productPage.addToCart.click();
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
         BrowserUtils.clickWithJS(homePage.sepetim);
         BrowserUtils.waitFor(3);
         int actualUrun = Integer.parseInt(basketPage.urunSayısı.getText());

@@ -20,7 +20,9 @@ public class ProductPage extends BasePage{
         for (int i=1;i<=num;i++){
 
             try {
-                Driver.get().findElement(By.xpath("//div[@class='marketplace-list']//tr["+i+"]/td//button")).click();
+                BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath("//div[@class='marketplace-list']//tr["+i+"]/td//button")));
+                BrowserUtils.clickWithJS(Driver.get().findElement(By.xpath("//div[@class='marketplace-list']//tr["+i+"]/td//button")));
+                //Driver.get().findElement(By.xpath("//div[@class='marketplace-list']//tr["+i+"]/td//button")).click();
                 BrowserUtils.waitForClickability(closePopup,7);
                 BrowserUtils.clickWithJS(closePopup);
                 BrowserUtils.waitFor(2);

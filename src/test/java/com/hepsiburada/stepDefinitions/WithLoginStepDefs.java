@@ -72,7 +72,7 @@ public class WithLoginStepDefs {
 
     @When("Add the product to basket from {int} vendor")
     public void add_the_product_to_basket_from_vendor(int vendor) {
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(1);
         productPage.addProductFromVendors(vendor);
         Log4j.info("Add the product to basket from "+vendor +" vendor");
 
