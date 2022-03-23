@@ -26,7 +26,6 @@ public class WithLoginStepDefs {
     public void navigate_to_home_page() {
         Driver.get().get(ConfigurationReader.get("url"));
         BrowserUtils.waitForClickability(homePage.girisYap,10);
-        Log4j.info("Opening Page : " + ConfigurationReader.get("url"));
 
     }
 
@@ -35,14 +34,13 @@ public class WithLoginStepDefs {
         BrowserUtils.hover(homePage.girisYap);
         homePage.login.click();
         BrowserUtils.waitForClickability(loginPage.emailBox,10);
-        Log4j.info("Go to login page");
+
     }
 
     @When("Send valid {string} and {string}")
     public void send_valid_and(String email, String password) {
 
         loginPage.login(email,password);
-        Log4j.info("Send valid email and password");
     }
 
 
@@ -50,14 +48,12 @@ public class WithLoginStepDefs {
     public void verify_that_user_can_login() {
         BrowserUtils.waitFor(2);
         BrowserUtils.verifyElementDisplayed(homePage.hesabım);
-        Log4j.info("Verify that user can login");
 
     }
 
     @When("Search to buy a {string}")
     public void search_to_buy_a(String product) {
         homePage.searchBox.sendKeys(product, Keys.ENTER);
-        Log4j.info("Search to buy a "+product);
 
     }
 
@@ -65,7 +61,6 @@ public class WithLoginStepDefs {
     public void choose_one_product_on_search_page() {
         BrowserUtils.waitFor(2);
         searchPage.chooseRandomPruduct();
-        Log4j.info("Choose one product on search page");
 
 
     }
@@ -74,7 +69,6 @@ public class WithLoginStepDefs {
     public void add_the_product_to_basket_from_vendor(int vendor) {
         BrowserUtils.waitFor(1);
         productPage.addProductFromVendors(vendor);
-        Log4j.info("Add the product to basket from "+vendor +" vendor");
 
     }
 
@@ -85,7 +79,6 @@ public class WithLoginStepDefs {
         BrowserUtils.waitFor(3);
         int actualUrun = Integer.parseInt(basketPage.urunSayısı.getText());
         Assert.assertEquals(expectedUrun,actualUrun);
-        Log4j.info("Verify that "+expectedUrun +" product in basket");
     }
 
 

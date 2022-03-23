@@ -14,7 +14,6 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        Log4j.startLog("Test  is Starting");
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
@@ -27,7 +26,6 @@ public class Hooks {
         }
         Thread.sleep(3000);
         Driver.closeDriver();
-        Log4j.endLog("Test is Ending");
 
     }
 

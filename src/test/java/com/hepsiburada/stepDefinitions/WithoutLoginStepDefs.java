@@ -20,7 +20,7 @@ public class WithoutLoginStepDefs {
     @When("The user goes to {string} {string}")
     public void the_user_goes_to(String Tab, String Module) {
         homePage.navigateToModule(Tab,Module);
-        Log4j.info("The user goes to "+Tab +","+Module+" product in basket");
+
     }
 
     @When("Click on Drone Yedek Parçaları")
@@ -28,14 +28,13 @@ public class WithoutLoginStepDefs {
         BrowserUtils.waitForClickability(searchPage.droneYedekParcaları,10);
         BrowserUtils.scrollToElement(searchPage.droneYedekParcaları);
         searchPage.droneYedekParcaları.click();
-        Log4j.info("Click on Drone Yedek Parçaları");
+
 
     }
 
     @When("Choose one drone product on search page")
     public void choose_one_drone_product_on_search_page() {
         searchPage.chooseRandomDronePruduct();
-        Log4j.info("Choose one drone product on search page");
     }
 
     @Then("Verify that {int} drone product is added to cart")
@@ -48,7 +47,6 @@ public class WithoutLoginStepDefs {
         BrowserUtils.waitFor(3);
         int actualUrun = Integer.parseInt(basketPage.urunSayısı.getText());
         Assert.assertEquals(expectedUrun,actualUrun);
-        Log4j.info("Verify that "+expectedUrun +" product in basket");
 
     }
 
